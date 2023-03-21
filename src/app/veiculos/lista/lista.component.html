@@ -1,0 +1,52 @@
+<main role="main" class="pb-3">
+
+
+    <h1>Lista Veiculos</h1>
+    <hr>
+  
+    <p>
+      <a class="btn btn-info" [routerLink]="['/']">Novo Veiculo</a>
+    </p>
+  
+    <table class="table table-hover table-sm ">
+      <thead class="thead-dark">
+        <tr>
+          
+          <th>Placa</th>
+          <th>Modelo</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor='let veiculo of veiculos'>
+          <td>
+              {{ veiculo.placa }}
+          </td>
+          <td>
+            {{ veiculo.modelo }} -  {{ veiculo.ano }}
+          </td>
+         
+          <td class="text-right">
+            <a class="btn btn-warning mr-1" [routerLink]="['/detalhes-veiculos', veiculo.id]">
+              <span class="fa fa-search"></span>
+            </a>
+        
+            
+            <a class="btn btn-info mr-1" href="#">
+              <span class="fa fa-pencil-alt"></span>
+            </a>
+  
+            <a class="btn btn-danger" href="#">
+              <span class="fa fa-trash"></span>
+            </a>
+          
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="form-group">
+        <a class="btn btn-info"  [routerLink]="['./lista-veiculos']">Voltar</a>
+    </div>
+  
+  </main>

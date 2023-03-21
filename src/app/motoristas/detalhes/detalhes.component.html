@@ -1,0 +1,159 @@
+<main role="main" class="pb-3">
+<div class="container main-container">
+    <h1>Detalhes do {{ motorista.nome }}</h1>
+
+    <div>
+        <h4>Informação somente leitura</h4>
+        <hr />
+        <dl class="row">
+
+            <dt class="col-sm-2">
+                <label class="control-label">Nome</label>
+            </dt>
+
+            <dd class="col-sm-10">
+                    {{ motorista.nome }}
+            </dd>
+
+            <dt class="col-sm-2">
+                <label class="control-label">Documento</label>
+            </dt>
+
+            <dd class="col-sm-10">
+                {{ motorista.documento }}
+                <!-- {{ fornecedor.tipoFornecedor === 1 ? (fornecedor.documento | cpf) : (fornecedor.documento | cnpj) }} -->
+            </dd>
+        </dl>  
+        
+</div>
+    <!-- *ngIf="errors.length > 0" -->
+          
+                <hr>
+                <h4>Corridas - Primeiro Motorista</h4>
+            
+                <table class="table table-hover table-sm">
+                    <thead class="thead-dark">
+                    <tr>
+                        
+                        <th>Veiculo</th>
+                        <th>Primeiro Motorista</th>
+                        <th>Data Início</th>
+                        <th>Data Fim</th>
+                        <th>Tipo Viagem</th>
+                        <th></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+
+                    <tr *ngFor='let corrida of motorista.corridasPrimeiroMotorista'>
+                        <td>
+                        {{ corrida.nomePlaca }} 
+                        </td>
+                        <td>
+                        {{ corrida.nomeMotoristaPrimeiro }}
+                        </td>
+                        <td>
+                        {{ corrida.dataHoraSaida  }}
+                        </td>
+                        <td>
+                        {{ corrida.dataHoraChegada  }}
+                        </td>
+                        <td>
+                        {{ corrida.tipoViagem  }}
+                        </td>
+                
+                        <td class="text-right">
+                        <a class="btn btn-warning mr-1" href="#">
+                            <span class="fa fa-search"></span>
+                        </a>
+                    
+                        
+                        <a class="btn btn-info mr-1" href="#">
+                            <span class="fa fa-pencil-alt"></span>
+                        </a>
+                
+                        <a class="btn btn-danger" href="#">
+                            <span class="fa fa-trash"></span>
+                        </a>
+                        
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>  
+
+          
+      
+<hr>
+    <br>
+
+    <!-- <lista-produto [produtos]="fornecedor.produtos"></lista-produto> -->
+           
+ 
+
+    <div class="container main-container">
+            
+   
+        <!-- *ngIf="errors.length > 0" -->
+      
+                    <hr>
+                    <h4>Corridas - Segundo Motorista</h4>
+           
+            
+                    <table class="table table-hover table-sm">
+                        <thead class="thead-dark">
+                        <tr>
+                            
+                            <th>Veiculo</th>
+                            <th>Segundo Motorista</th>
+                            <th>Data Início</th>
+                            <th>Data Fim</th>
+                            <th>Tipo Viagem</th>
+                            <th></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+
+                        <tr *ngFor='let corrida of motorista.corridasSegundoMotorista'>
+                            <td>
+                            {{ corrida.nomePlaca }} 
+                            </td>
+                            <td>
+                            {{ corrida.nomeMotoristaSegundo }}
+                            </td>
+                            <td>
+                            {{ corrida.dataHoraSaida  }}
+                            </td>
+                            <td>
+                            {{ corrida.dataHoraChegada  }}
+                            </td>
+                            <td>
+                            {{ corrida.tipoViagem  }}
+                            </td>
+                    
+                            <td class="text-right">
+                            <a class="btn btn-warning mr-1" href="#">
+                                <span class="fa fa-search"></span>
+                            </a>
+                        
+                            
+                            <a class="btn btn-info mr-1" href="#">
+                                <span class="fa fa-pencil-alt"></span>
+                            </a>
+                    
+                            <a class="btn btn-danger" href="#">
+                                <span class="fa fa-trash"></span>
+                            </a>
+                            
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>  
+    
+            
+                <div class="card-footer">
+                    <!-- <a class="btn btn-dark" [routerLink]="['/fornecedores/editar',fornecedor.id]">Editar</a>&nbsp; -->
+                    <a class="btn btn-info" [routerLink]="['/lista-motoristas']">Voltar</a>
+                </div>
+</main>

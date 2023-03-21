@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/cfd31b4f-b320-49a4-8d06-0c6d61b26112/resourceGroups/corresapp_group/providers/Microsoft.Web/sites/corre-frontend",
+    "appService.deploySubpath": "dist\\corres-webapi"
+}
