@@ -3,8 +3,8 @@ import { throwError } from 'rxjs';
 
 export abstract class BaseService {
 
-   //protected UrlServiceV1: string ="https://localhost:7089/";
-   protected UrlServiceV1: string ="https://devioapicorre.azurewebsites.net/";
+   protected UrlServiceV1: string ="https://localhost:7089/";
+   //protected UrlServiceV1: string ="https://devioapicorre.azurewebsites.net/";
     protected ObterHeaderJson() {
         return {
              headers: new HttpHeaders({
