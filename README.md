@@ -25,3 +25,10 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+# Descrição
+
+Projeto FrontEnd de Corridas: Um motorista pode realizar uma ou mais viagens em um determinado Horário. Não podendo ter outras corridas naquele Horário
+
+[corre-frontend.azurewebsites.net/](https://corre-frontend.azurewebsites.net/)
+
+bootstrap angular typescript api-rest html-css-javascript
